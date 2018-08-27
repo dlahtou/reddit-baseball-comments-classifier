@@ -5,6 +5,11 @@ import os
 from psaw import PushshiftAPI
 
 def main():
+    """Fetches all reddit comments from every baseball team subreddit
+
+    Retrieves comments posted between the dates March 28, 2018 and August 20, 2018.
+    """
+
     api = PushshiftAPI()
     start_time = 1522281600
 

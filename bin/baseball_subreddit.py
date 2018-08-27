@@ -5,7 +5,9 @@ from psaw import PushshiftAPI
 
 def main():
     '''
-    Download r/baseball commment data for the time period from start to end (timestamps)
+    Downloads r/baseball commment data for the time period from start to end (timestamps)
+    
+    Retrieves comments posted between the dates March 28, 2018 and August 20, 2018.
     '''
 
     api = PushshiftAPI()
@@ -27,7 +29,7 @@ def main():
         if not comments:
             break
 
-        with open(f'newdata{counter}.json', 'w') as open_file:
+        with open(f'data/baseball/data{counter}.json', 'w') as open_file:
             open_file.write(json.dumps(comments))
 
         # assign timestamp of oldest retrieved comment as end
